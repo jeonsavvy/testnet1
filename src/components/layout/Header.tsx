@@ -4,7 +4,7 @@ import styles from './Header.module.css';
 const navItems = [
     { label: 'Profile', href: '#profile' },
     { label: 'Career', href: '#career' },
-    { label: 'Projects', href: '#activity' }, // Mapping 'Projects' to Activity/Highlights for now as per user req
+    { label: 'Certificate', href: '#certificate' },
     { label: 'Contact', href: '#footer' },
 ];
 

@@ -32,9 +32,9 @@ const activityData = [
 
 export default function Activity() {
     return (
-        <section id="activity" className={styles.section}>
+        <section id="certificate" className={styles.section}>
             <div className="container">
-                <SectionHeader title="Highlights" />
+                <SectionHeader title="Certificate" />
                 <div className={styles.cardGrid}>
                     {activityData.map((item, index) => (
                         <Card
