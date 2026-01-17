@@ -7,11 +7,6 @@ const profileData = [
         title: "EDUCATION",
         subtitle: "2019.03 ~ 2026.02 졸업 예정",
         role: "충남대학교 경영학부",
-    },
-    {
-        title: "MILITARY SERVICE",
-        subtitle: "2019.03 ~ 2020.10",
-        role: "육군 병장 만기 제대",
     }
 ];
 

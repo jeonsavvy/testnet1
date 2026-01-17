@@ -18,7 +18,7 @@ export default function Footer() {
                 </div>
                 <div className={styles.bottomArea}>
                     <div className={styles.copyright}>
-                        © {new Date().getFullYear()} JEON CHAN HYUK. All Rights Reserved.
+                        <p className={styles.copyright}>&copy; JEON CHAN HYUK. All Rights Reserved.</p>
                     </div>
                     <a
                         href="https://www.instagram.com/jeonchanhyuk_/"

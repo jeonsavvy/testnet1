@@ -13,7 +13,7 @@ export default function Hero() {
             </div>
             <div className={`container ${styles.content}`}>
                 <h1 className={styles.title}>
-                    TO CLARITY
+                    CLARITY
                 </h1>
             </div>
         </section>
