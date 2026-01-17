@@ -1,0 +1,43 @@
+.card {
+    background: #FFFFFF;
+    border: 1px solid var(--color-line);
+    padding: 30px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.cardHeader {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--color-line);
+    padding-bottom: 15px;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+.role {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.descList {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}

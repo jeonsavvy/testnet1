@@ -1,0 +1,17 @@
+.section {
+    padding: 120px 0;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-line);
+}
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .cardGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

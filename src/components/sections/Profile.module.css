@@ -1,0 +1,38 @@
+.section {
+    padding: 120px 0;
+    background: var(--color-bg);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.nameBlock {
+    margin-bottom: 20px;
+}
+
+.nameEn {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.nameKr {
+    font-size: 1.5rem;
+    color: var(--color-text-secondary);
+}
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .cardGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
