@@ -83,7 +83,7 @@ export default async function ProjectPage({
                     </section>
 
                     {/* Features Grid */}
-                    {project.content.features?.length > 0 && (
+                    {project.content.features && project.content.features.length > 0 && (
                         <section>
                             <h2 className={styles.sectionTitle}>Key Features</h2>
                             <div className={styles.featureGrid}>
