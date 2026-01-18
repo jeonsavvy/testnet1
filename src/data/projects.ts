@@ -44,58 +44,50 @@ export const projects: Project[] = [
     {
         id: "match-cut",
         title: "Match Cut",
-        subtitle: "AI 기반 이미지 정합성 검증 솔루션",
+        subtitle: "AI 이미지 정합성 검증 솔루션",
         date: "2024",
         role: "Personal Project",
-        description: "브라우저 내장형 경량 AI 모델을 활용하여 서버 비용 없이 이미지 정합성을 검증하는 자동화 도구",
+        description: "평소에는 서버리스 상태로 대기하며 검증 수행. 정밀 분석 원할시에만 리소스를 점유하는 Serverless Container 패턴을 채택.",
         pdfUrl: "/documents/MatchCut.pdf",
-        tags: ["Next.js", "Transformers.js", "Supabase", "Zustand"],
+        tags: ["Next.js", "Transformers.js", "FastAPI", "Python", "Supabase", "Docker"],
         links: {
             github: "https://github.com/jeonsavvy/MatchCut",
             demo: "https://match-cut-jeonsavvys-projects.vercel.app/"
         },
         content: {
-            intro: "브라우저 탑재에 적합한 경량 AI 모델(openai/clip-vit-large-patch14)을 활용한 이미지 검수 자동화 솔루션입니다.",
+            intro: "평소에는 서버리스 상태로 대기하며 검증 수행. 정밀 분석 원할시에만 리소스를 점유하는 Serverless Container 패턴을 채택.",
             images: {
-                demo: "/projects/match-cut/demo.png",
-                architecture: "/projects/match-cut/architecture.png"
+                demo: "/projects/match-cut/demo-new.png",
+                architecture: "/projects/match-cut/architecture-new.png"
             },
             problem: {
-                title: "과다한 비용과 지연",
-                desc: "생성형 AI 이미지를 검수하는 데 API 호출 비용이 과다하게 발생하고, 네트워크 지연으로 대량 처리가 비효율적임."
+                title: "비용과 지연 문제",
+                desc: "모든 이미지를 서버로 보내면 API 비용이 기하급수적으로 증가하며 단순 필터링에 지연 발생."
             },
             solution: {
-                title: "브라우저 온디바이스 AI",
-                desc: "브라우저 탑재에 적합한 경량 AI 모델(openai/clip-vit-large-patch14) 탑재하여 서버 통신 없이 즉시 검증."
+                title: "Serverless Container 패턴",
+                desc: "평소에는 서버리스 상태로 대기하며 검증 수행. 정밀 분석 원할시에만 리소스를 점유하는 Serverless Container 패턴을 채택. (본 데모에서는 로컬 서버 구동을 통해 리소스 분리 구조를 시뮬레이션)"
             },
             features: [
                 {
-                    title: "Hybrid Ingest System",
-                    desc: "Drag & Drop으로 수천 장의 이미지를 올려도 멈추지 않는 처리 큐 설계"
-                },
-                {
-                    title: "On-Device Verification",
-                    desc: "서버 통신 없이 브라우저 메모리 위에서 정합성 판별"
-                },
-                {
-                    title: "Smart Curation",
-                    desc: "AI 신뢰도가 낮은 데이터(Gray Zone)만 사람이 보게 하여 검수 효율 증대"
+                    title: "Dual-Engine AI Pipeline",
+                    desc: "백엔드 서버가 꺼져 있어도 브라우저 모델로 핵심 기능(업로드, 검증) 작동. Python 서버 연결 시 심층 분석(L2) 기능 활성화."
                 }
             ],
             architecture: {
-                desc: "Next.js Frontend + Transformers.js (In-Browser Inference) + Web Workers for Parallel Processing."
+                desc: "Next.js (Vercel Edge) + FastAPI (Docker) 구조로 분리. 로컬 개발 시 Rewrites 규칙으로 단일 도메인처럼 통합."
             },
             troubleshooting: [
                 {
-                    issue: "브라우저 프리징: 수백 장의 이미지를 동시에 분석할 때 메인 스레드가 차단되어 UI가 멈추는 현상 발생",
-                    solution: "Web Worker를 도입하여 무거운 연산을 백그라운드 스레드로 격리 및 병렬 처리하여 1,000장 업로드 중에도 UI 반응성 확보"
+                    issue: "Supabase Storage에 한글 파일명 업로드 시 Invalid Key 에러 발생.",
+                    solution: "파일명을 URL-Safe Base64로 인코딩하여 모든 유니코드 문자를 영문/숫자로 변환후 서버/클라이언트 양쪽에서 디코딩 로직 통일."
                 },
                 {
-                    issue: "모델 로딩 속도: 모델을 매번 다운로드하여 로딩이 느림",
-                    solution: "브라우저 Cache API로 모델을 로컬 캐싱하여 재방문 시 로딩 시간 대폭 감소"
+                    issue: "기존 Next.js API Routes만으로는 PyTorch/CUDA 가속 활용 불가.",
+                    solution: "Next.js (Vercel Edge) + FastAPI (Docker) 구조로 분리하되, 로컬 개발 시 Rewrites 규칙으로 단일 도메인처럼 통합."
                 }
             ],
-            retrospective: "서버 비용 제거 및 데이터 처리 속도 향상. 브라우저 기반 AI 파이프라인 구축 경험."
+            retrospective: "Impact: 백엔드가 없으면 죽는게 아니라 가볍게 도는 사이트를 만듦으로써 서비스의 생존성 증명.\nGrowth: 단순 MVP 제작을 넘어 인코딩/배포 환경 등 실제 운영 시 마주칠 엣지 케이스 해결에 집중."
         }
     },
     {
