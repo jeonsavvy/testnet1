@@ -6,9 +6,10 @@ interface Props {
     role?: string;
     description?: string[];
     children?: React.ReactNode;
+    cta?: string;
 }
 
-export default function Card({ title, subtitle, role, description, children }: Props) {
+export default function Card({ title, subtitle, role, description, children, cta }: Props) {
     return (
         <div className={styles.card}>
             <div className={styles.cardHeader}>
@@ -26,6 +27,11 @@ export default function Card({ title, subtitle, role, description, children }: P
                 )}
                 {children}
             </div>
+            {cta && (
+                <div className={styles.ctaOverlay}>
+                    <span className={styles.ctaText}>{cta}</span>
+                </div>
+            )}
         </div>
     );
 }
