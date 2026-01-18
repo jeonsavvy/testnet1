@@ -66,7 +66,7 @@ export const projects: Project[] = [
             },
             solution: {
                 title: "Serverless Container 패턴",
-                desc: "평소에는 서버리스 상태로 대기하며 검증 수행. 정밀 분석 원할시에만 리소스를 점유하는 Serverless Container 패턴을 채택. (본 데모에서는 로컬 서버 구동을 통해 리소스 분리 구조를 시뮬레이션)"
+                desc: "평소에는 서버리스 상태로 대기하며 검증 수행. 정밀 분석 원할시에만 리소스를 점유하는 Serverless Container 패턴을 채택."
             },
             features: [
                 {
