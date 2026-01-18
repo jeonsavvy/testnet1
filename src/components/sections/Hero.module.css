@@ -27,7 +27,7 @@
 }
 
 .title {
-    font-size: clamp(4rem, 15vw, 12rem);
+    font-size: clamp(2.5rem, 15vw, 12rem);
     /* Increased size significantly */
     font-weight: 800;
     line-height: 1;

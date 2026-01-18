@@ -3,6 +3,12 @@
     /* Background removed for consistency */
 }
 
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(var(--grid-cols-mobile), 1fr);

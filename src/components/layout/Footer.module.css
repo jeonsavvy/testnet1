@@ -58,6 +58,10 @@
 }
 
 @media (max-width: 768px) {
+    .footer {
+        padding: 40px 0;
+    }
+
     .info {
         grid-template-columns: 1fr;
     }

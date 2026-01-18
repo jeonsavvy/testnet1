@@ -3,6 +3,12 @@
     background: var(--color-bg);
 }
 
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+}
+
 .content {
     display: flex;
     flex-direction: column;
