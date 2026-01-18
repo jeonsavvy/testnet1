@@ -15,6 +15,12 @@ export default function Footer() {
                             jeonsavvy@gmail.com
                         </a>
                     </div>
+                    <div className={styles.row}>
+                        <span className={styles.label}>Phone</span>
+                        <a href="tel:01064312951" className={styles.value}>
+                            010-6431-2951
+                        </a>
+                    </div>
                 </div>
                 <div className={styles.bottomArea}>
                     <div className={styles.copyright}>

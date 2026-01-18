@@ -1,7 +1,6 @@
 .section {
     padding: 120px 0;
-    background: #F8F8F8;
-    /* Slight contrast for section separation */
+    /* Background removed for consistency */
 }
 
 .grid {

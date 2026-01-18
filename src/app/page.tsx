@@ -1,7 +1,8 @@
 import Hero from '@/components/sections/Hero';
 import Profile from '@/components/sections/Profile';
 import Career from '@/components/sections/Career';
-import Activity from '@/components/sections/Activity';
+import Certificate from '@/components/sections/Certificate';
+import Projects from '@/components/sections/Projects';
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
       <Hero />
       <Profile />
       <Career />
-      <Activity />
+      <Certificate />
+      <Projects />
     </main>
   );
 }

@@ -5,7 +5,7 @@ const navItems = [
     { label: 'Profile', href: '#profile' },
     { label: 'Career', href: '#career' },
     { label: 'Certificate', href: '#certificate' },
-    { label: 'Contact', href: '#footer' },
+    { label: 'Projects', href: '#projects' },
 ];
 
 export default function Header() {

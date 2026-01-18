@@ -5,6 +5,8 @@ import dynamic from 'next/dynamic';
 
 const DataCube = dynamic(() => import('@/components/visual/DataCube'), { ssr: false });
 
+import FadeIn from '@/components/ui/FadeIn';
+
 export default function Hero() {
     return (
         <section className={styles.hero}>
@@ -12,9 +14,11 @@ export default function Hero() {
                 <DataCube />
             </div>
             <div className={`container ${styles.content}`}>
-                <h1 className={styles.title}>
-                    CLARITY
-                </h1>
+                <FadeIn delay={0.5}>
+                    <h1 className={styles.title}>
+                        CLARITY
+                    </h1>
+                </FadeIn>
             </div>
         </section>
     );

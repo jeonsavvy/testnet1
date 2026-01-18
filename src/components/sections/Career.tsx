@@ -14,22 +14,26 @@ const careerData = [
     }
 ];
 
+import FadeIn from '@/components/ui/FadeIn';
+
 export default function Career() {
     return (
         <section id="career" className={styles.section}>
             <div className="container">
-                <SectionHeader title="Career" />
-                <div className={styles.grid}>
-                    {careerData.map((item, index) => (
-                        <Card
-                            key={index}
-                            title={item.company}
-                            subtitle={item.period}
-                            role={item.role}
-                            description={item.description}
-                        />
-                    ))}
-                </div>
+                <FadeIn>
+                    <SectionHeader title="Career" />
+                    <div className={styles.grid}>
+                        {careerData.map((item, index) => (
+                            <Card
+                                key={index}
+                                title={item.company}
+                                subtitle={item.period}
+                                role={item.role}
+                                description={item.description}
+                            />
+                        ))}
+                    </div>
+                </FadeIn>
             </div>
         </section>
     );

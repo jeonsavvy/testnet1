@@ -10,23 +10,31 @@ const profileData = [
     }
 ];
 
+import FadeIn from '@/components/ui/FadeIn';
+
 export default function Profile() {
     return (
         <section id="profile" className={styles.section}>
             <div className="container">
-                <SectionHeader title="Profile" />
-                <div className={styles.content}>
-                    <div className={styles.cardGrid}>
-                        {profileData.map((item, index) => (
-                            <Card
-                                key={index}
-                                title={item.title}
-                                subtitle={item.subtitle}
-                                role={item.role}
-                            />
-                        ))}
+                <FadeIn>
+                    <SectionHeader title="Profile" />
+                    <div className={styles.content}>
+                        <div className={styles.cardGrid}>
+                            {profileData.map((item, index) => (
+                                <Card
+                                    key={index}
+                                    title={item.title}
+                                    subtitle={item.subtitle}
+                                    role={item.role}
+                                />
+                            ))}
+                        </div>
+                        <div className={styles.additionalInfo} style={{ marginTop: '20px', fontSize: '14px', color: 'var(--color-text-secondary)' }}>
+                            <p>Born in 1999</p>
+                            <p>Military Service: Army Sergeant (2020)</p>
+                        </div>
                     </div>
-                </div>
+                </FadeIn>
             </div>
         </section>
     );
