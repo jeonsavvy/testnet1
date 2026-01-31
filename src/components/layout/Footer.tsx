@@ -20,7 +20,7 @@ export default function Footer() {
                 </div>
                 <div className={styles.bottomArea}>
                     <div className={styles.copyright}>
-                        <p className={styles.copyright}>Copyright &copy; 2026 JEON CHAN HYUK</p>
+                        <p className={styles.copyright}>Copyright &copy; {new Date().getFullYear()} JEON CHAN HYUK</p>
                     </div>
                     <div className={styles.socialGroup} style={{ display: 'flex', gap: '8px' }}>
                         <a
