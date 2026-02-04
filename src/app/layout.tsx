@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   title: "JEON CHAN HYUK",
   description: "Personal Portfolio of Jeon Chan Hyuk - Catalog Operations & AI Enthusiast",
   openGraph: {
-    title: "JEON CHAN HYUK - Portfolio",
-    description: "Catalog Operations & AI Enthusiast. Explore my projects and career.",
+    title: "JEON CHAN HYUK",
+    description: "",
     url: "https://jeonsavvy.github.io/testnet1", // Replace with your actual deployed URL if different
     siteName: "Jeon Chan Hyuk Portfolio",
     images: [
