@@ -18,7 +18,7 @@ const othersData = [
     },
     {
         title: "두나무",
-        subtitle: "AVAX AMA 참가, UDC 2025 참가, 업비트 투자 메이저리그 참가",
+        subtitle: "AVAX AMA 참가, UDC 2025 참가",
         role: "Activity",
     },
     {
