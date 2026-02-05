@@ -18,6 +18,15 @@ export default function Profile() {
             <div className="container">
                 <FadeIn>
                     <SectionHeader title="Profile" />
+
+                    <div className={styles.summary} style={{ marginBottom: '40px', lineHeight: '1.8' }}>
+                        <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: 'var(--color-primary)' }}>SUMMARY</h3>
+                        <ul style={{ listStyleType: 'disc', paddingLeft: '20px', color: 'var(--color-text-secondary)' }}>
+                            <li><strong>AI 및 자동화 툴 활용:</strong> 업무 보조 도구를 구현하거나 프로세스 개선 가능</li>
+                            <li><strong>실무 경험:</strong> 이커머스 데이터 관리 및 가이드라인 준수 업무를 수행</li>
+                        </ul>
+                    </div>
+
                     <div className={styles.content}>
                         <div className={styles.cardGrid}>
                             {profileData.map((item, index) => (

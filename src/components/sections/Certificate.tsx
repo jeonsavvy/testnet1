@@ -8,28 +8,23 @@ import FadeIn from '@/components/ui/FadeIn';
 const activityData = [
     {
         title: "Hugging Face",
-        subtitle: "Fundamentals of MCP",
-        role: "Certificate",
-    },
-    {
-        title: "Hugging Face",
-        subtitle: "AI Agents Fundamentals",
-        role: "Certificate",
+        subtitle: "Fundamentals of AI Agents & MCP 수료",
+        role: "Education",
     },
     {
         title: "두나무",
-        subtitle: "업비트×아발란체 AMA 참가",
-        role: "Conference",
+        subtitle: "AVAX AMA 참가, UDC 2025 참가, 업비트 투자 메이저리그 참가",
+        role: "Activity",
     },
     {
-        title: "한국사능력검정시험 2급",
-        subtitle: "National Institute of Korean History",
-        role: "Certification",
+        title: "대한민국 육군",
+        subtitle: "육군 병장 만기 전역",
+        role: "Military",
     },
     {
-        title: "2종보통운전면허",
-        subtitle: "Driver's License",
-        role: "License",
+        title: "자격증",
+        subtitle: "한국사능력검정시험 2급, 2종보통 운전면허",
+        role: "Certificate",
     }
 ];
 

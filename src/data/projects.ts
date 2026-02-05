@@ -44,7 +44,7 @@ export const projects: Project[] = [
     {
         id: "match-cut",
         title: "Match Cut",
-        subtitle: "AI 이미지 정합성 검증 솔루션",
+        subtitle: "생성형 이미지 정합성 검증 자동화 솔루션",
         date: "2024",
         role: "Personal Project",
         description: "평소에는 서버리스 상태로 대기하며 검증 수행. 정밀 분석 원할시에만 리소스를 점유하는 Serverless Container 패턴을 채택.",
@@ -66,7 +66,7 @@ export const projects: Project[] = [
             },
             solution: {
                 title: "Serverless Container 패턴",
-                desc: "평소에는 서버리스 상태로 대기하며 검증 수행. 정밀 분석 원할시에만 리소스를 점유하는 Serverless Container 패턴을 채택."
+                desc: "평소에는 서버리스 상태로 대기하며 검증 수행. 정밀 분석 원할시에만 리소스를 점유하는 Serverless Container 패턴을 채택. 결과적으로 상시 가동 비용 부담 해소 및 아키텍처 유연성 확보."
             },
             features: [
                 {
@@ -79,12 +79,12 @@ export const projects: Project[] = [
             },
             troubleshooting: [
                 {
-                    issue: "Supabase Storage에 한글 파일명 업로드 시 Invalid Key 에러 발생.",
-                    solution: "파일명을 URL-Safe Base64로 인코딩하여 모든 유니코드 문자를 영문/숫자로 변환후 서버/클라이언트 양쪽에서 디코딩 로직 통일."
+                    issue: "Issue 1: 파일 업로드 오류",
+                    solution: "Supabase Storage에 한글 파일명 업로드 시 Invalid Key 에러 발생하여, 파일명을 URL-Safe Base64로 인코딩하여 모든 유니코드 문자를 영문/숫자로 변환후 서버/클라이언트 양쪽에서 디코딩 로직 통일."
                 },
                 {
-                    issue: "기존 Next.js API Routes만으로는 PyTorch/CUDA 가속 활용 불가.",
-                    solution: "Next.js (Vercel Edge) + FastAPI (Docker) 구조로 분리하되, 로컬 개발 시 Rewrites 규칙으로 단일 도메인처럼 통합."
+                    issue: "Issue 2: 단일 런타임의 한계 극복",
+                    solution: "기존 Next.js API Routes만으로는 PyTorch/CUDA 가속 활용 불가하여, Next.js (Vercel Edge) + FastAPI (Docker) 구조로 분리하되, 로컬 개발 시 Rewrites 규칙으로 단일 도메인처럼 통합."
                 }
             ],
             retrospective: "Impact: 백엔드가 없으면 죽는게 아니라 가볍게 도는 사이트를 만듦으로써 서비스의 생존성 증명.\nGrowth: 단순 MVP 제작을 넘어 인코딩/배포 환경 등 실제 운영 시 마주칠 엣지 케이스 해결에 집중."
@@ -93,18 +93,18 @@ export const projects: Project[] = [
     {
         id: "v-mate",
         title: "V-MATE",
-        subtitle: "이중 심리 AI 챗봇",
+        subtitle: "이중 심리 AI 캐릭터 챗봇 플랫폼",
         date: "2025",
         role: "Personal Project",
-        description: "AI 에이전트를 활용하여 이중 심리를 가진 캐릭터와의 몰입감 있는 대화 경험을 제공하는 플랫폼",
+        description: "'이중 심리 엔진'을 설계하여 캐릭터가 상황에 따라 속마음과 다른 말을 하도록 유도하여 심리적 입체감 부여.",
         pdfUrl: "/documents/V-Mate.pdf",
-        tags: ["React", "Gemini API", "Netlify Functions", "Supabase"],
+        tags: ["React", "Gemini API", "Netlify Functions", "Supabase", "Vite", "Tailwind CSS"],
         links: {
             github: "https://github.com/jeonsavvy/V-MATE-PLATFORM",
             demo: "https://v-mate-platform.netlify.app/"
         },
         content: {
-            intro: "이중 심리 엔진을 탑재하여 캐릭터가 속마음과 다른 말을 하도록 유도, 심리적 입체감을 부여한 AI 챗봇입니다.",
+            intro: "기존 챗봇은 너무 평면적이라 사용자가 금방 질리는 점을 해결하기 위해, 캐릭터의 '속마음'과 '겉말'을 분리하는 이중 프롬프트 엔지니어링을 설계하여 입체감을 부여했습니다.",
             images: {
                 demo: "/projects/v-mate/demo.png",
                 architecture: "/projects/v-mate/architecture.png"
@@ -115,7 +115,7 @@ export const projects: Project[] = [
             },
             solution: {
                 title: "이중 심리 엔진 설계",
-                desc: "'이중 심리 엔진'을 설계하여 캐릭터가 상황에 따라 속마음과 다른 말을 하도록 유도하여 심리적 입체감 부여."
+                desc: "'이중 심리 엔진'을 설계하여 캐릭터가 상황에 따라 속마음과 다른 말을 하도록 유도하여 심리적 입체감 부여. 대화 맥락에 따라 실시간으로 변화하는 반응형 캐릭터 UI 적용."
             },
             features: [
                 {
@@ -136,42 +136,42 @@ export const projects: Project[] = [
             },
             troubleshooting: [
                 {
-                    issue: "API 키 보안: 클라이언트 사이드 호출로 인해 API Key가 네트워크 탭에 노출되는 위험",
-                    solution: "Netlify Functions를 프록시 서버로 두어 요청을 중계하여 보안 취약점 개선"
+                    issue: "Issue 1: API 키 보안",
+                    solution: "클라이언트 사이드 호출로 인해 API Key가 네트워크 탭에 노출되는 위험이 있어, Netlify Functions를 프록시 서버로 두어 요청을 중계."
                 },
                 {
-                    issue: "딱딱한 에러 메시지: 서버 오류 시 '500 Error' 같은 기계적 메시지가 몰입을 깸",
-                    solution: "에러 핸들링 로직에 '캐릭터 페르소나' 주입 (예: '으윽... 머리가 아파(연결 실패)')하여 장애 상황조차 콘텐츠로 승화"
+                    issue: "Issue 2: 딱딱한 에러 메시지",
+                    solution: "서버 오류 시 '500 Error' 같은 기계적 메시지가 몰입을 깨는 문제를 해결하기 위해, 에러 핸들링 로직에 '캐릭터 페르소나' 주입 (예: '으윽... 머리가 아파(연결 실패)')."
                 }
             ],
-            retrospective: "단순한 챗봇이 아닌, '감정적 애착'을 형성하는 캐릭터 서비스 프로토타입 완성. LLM을 단순 호출하는 것을 넘어, 구조적으로 제어하는 프롬프트 엔지니어링 경험."
+            retrospective: "Impact: 단순한 챗봇이 아닌, '감정적 애착'을 형성하는 캐릭터 서비스 프로토타입 완성.\nGrowth: LLM을 단순 호출하는 것을 넘어, 구조적으로 제어하는 프롬프트 엔지니어링 경험."
         }
     },
     {
         id: "voc-radar",
         title: "VoC-Radar",
-        subtitle: "앱스토어 리뷰 자동화 대응 시스템",
+        subtitle: "고객 리뷰 분석 및 알림 자동화 시스템",
         date: "2024",
         role: "Personal Project",
-        description: "n8n과 AI를 활용하여 앱스토어 리뷰를 수집, 분석, 알림 보내는 자동화 파이프라인",
+        description: "n8n과 AI를 결합하여 수집-분석-알림 과정을 자동화하는 파이프라인. '대응할 이슈'일 때만 알림 발송.",
         pdfUrl: "/documents/VoC-Radar.pdf",
         tags: ["n8n", "Gemini API", "Google Sheets API", "Telegram API"],
         links: {
             github: "https://github.com/jeonsavvy/VoC-Radar"
         },
         content: {
-            intro: "n8n과 AI를 결합하여 수집-분석-알림 과정을 자동화하는 파이프라인 시스템입니다.",
+            intro: "매일 앱스토어 리뷰를 수동으로 확인하고 시트에 옮기는 반복 업무로 인한 리소스 낭비 해결을 위해, n8n과 AI를 결합하여 수집-분석-알림 과정을 자동화하는 파이프라인을 구축했습니다.",
             images: {
                 demo: "/projects/voc-radar/demo.png",
                 architecture: "/projects/voc-radar/architecture.png"
             },
             problem: {
                 title: "반복적인 수동 업무",
-                desc: "매일 앱스토어 리뷰를 수동으로 확인하고 시트에 옮기는 반복 업무로 인한 리소스 낭비."
+                desc: "매일 앱스토어 리뷰를 수동으로 확인하고 시트에 옮기는 반복 업무로 인한 리소스 낭비 및 이슈 대응 지연."
             },
             solution: {
                 title: "n8n 기반 AI 파이프라인",
-                desc: "n8n과 AI를 결합하여 수집-분석-알림 과정을 완전 자동화."
+                desc: "n8n과 AI를 결합하여 수집-분석-알림 과정을 자동화하는 파이프라인 완성. 운영팀이 즉시 대응해야 할 'Critical' 기준을 정의후 텔레그램 봇 실시간 알림 로직 구현."
             },
             features: [
                 {
@@ -192,15 +192,15 @@ export const projects: Project[] = [
             },
             troubleshooting: [
                 {
-                    issue: "무분별한 알림: 모든 부정적 리뷰에 알림을 보내는 부작용 발생",
-                    solution: "AI에게 '심각도 평가' 단계를 추가하여, 위기 상황에만 알림을 보내도록 로직 개선하여 신뢰도 상승"
+                    issue: "Issue 1: 무분별한 알림",
+                    solution: "모든 부정적 리뷰에 알림을 보내는 부작용 발생하여, AI에게 '심각도 평가' 단계를 추가하여 위기 상황에만 알림을 보내도록 로직 개선."
                 },
                 {
-                    issue: "데이터 중복 수집: RSS 피드가 갱신될 때마다 기존 리뷰가 중복으로 들어오는 문제",
-                    solution: "Google Sheets의 고유 ID(Review ID)를 조회하는 'Look-up' 노드를 n8n에 추가하여 무결성 확보"
+                    issue: "Issue 2: 데이터 중복 수집",
+                    solution: "RSS 피드가 갱신될 때마다 기존 리뷰가 중복으로 들어오는 문제 해결을 위해, Google Sheets의 고유 ID(Review ID)를 조회하는 'Look-up' 노드를 n8n에 추가."
                 }
             ],
-            retrospective: "CS 모니터링 업무 시간 단축 시스템의 프로토타입 완성. n8n 기반 자동화 워크플로우 설계 경험."
+            retrospective: "Impact: CS 모니터링 업무 시간 단축 시스템의 프로토타입 완성.\nGrowth: n8n 기반 자동화 워크플로우 설계 경험."
         }
     }
 ];

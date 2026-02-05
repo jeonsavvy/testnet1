@@ -4,11 +4,12 @@ import styles from './Career.module.css';
 
 const careerData = [
     {
-        company: "쿠팡 주식회사",
+        company: "쿠팡 (Coupang)",
         period: "2025.04 ~ 2025.07",
-        role: "Catalog Operation",
+        role: "Catalog Operation - Associate",
         description: [
-            "사내 데이터 관리 시스템 기반의 일 400건 이상 상품 DB 검수를 통해 카탈로그 품질 데이터 정합성 유지"
+            "데이터 정합성 확보: Raw Data를 분석하여, 일 평균 400건 이상의 상품 정보를 표준화된 기준으로 정제",
+            "이슈 리포팅: 업무 중 발견된 시스템 오류나 SOP 미비 사항을 식별 및 공유하여 운영 프로세스 효율 제고"
         ]
     }
 ];
