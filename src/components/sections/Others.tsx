@@ -2,10 +2,15 @@
 
 import SectionHeader from '@/components/ui/SectionHeader';
 import Card from '@/components/ui/Card';
-import styles from './Activity.module.css'; // Reusing styles
+import styles from './Activity.module.css'; // Reusing Activity styles as requested for similar layout
 import FadeIn from '@/components/ui/FadeIn';
 
-const activityData = [
+const othersData = [
+    {
+        title: "대한민국 육군",
+        subtitle: "2019.03 ~ 2020.10",
+        role: "육군 병장 만기 전역",
+    },
     {
         title: "Hugging Face",
         subtitle: "Fundamentals of AI Agents & MCP 수료",
@@ -23,14 +28,14 @@ const activityData = [
     }
 ];
 
-export default function Certificate() {
+export default function Others() {
     return (
-        <section id="certificate" className={styles.section}>
+        <section id="others" className={styles.section}>
             <div className="container">
                 <FadeIn delay={0.2}>
-                    <SectionHeader title="CERTIFICATE" />
+                    <SectionHeader title="OTHERS" />
                     <div className={styles.cardGrid}>
-                        {activityData.map((item, index) => (
+                        {othersData.map((item, index) => (
                             <Card
                                 key={index}
                                 title={item.title}
