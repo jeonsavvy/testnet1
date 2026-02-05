@@ -3,8 +3,8 @@ import styles from './Header.module.css';
 
 const navItems = [
     { label: 'Profile', href: '#profile' },
-    { label: 'Career', href: '#career' },
-    { label: 'Certificate', href: '#certificate' },
+    { label: 'Capability', href: '#capability' },
+    { label: 'Others', href: '#others' },
     { label: 'Projects', href: '#projects' },
 ];
 

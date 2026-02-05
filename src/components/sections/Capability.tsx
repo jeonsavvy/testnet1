@@ -1,6 +1,7 @@
 "use client";
 
 import SectionHeader from '@/components/ui/SectionHeader';
+import Card from '@/components/ui/Card';
 import styles from './Capability.module.css';
 import FadeIn from '@/components/ui/FadeIn';
 
@@ -31,14 +32,13 @@ export default function Capability() {
                     <SectionHeader title="CAPABILITY" />
                     <div className={styles.grid}>
                         {capabilityData.map((group, index) => (
-                            <div key={index} className={styles.categoryCard}>
-                                <h3 className={styles.categoryTitle}>{group.category}</h3>
+                            <Card key={index} title={group.category}>
                                 <div className={styles.tagContainer}>
                                     {group.items.map((item, i) => (
                                         <span key={i} className={styles.tag}>{item}</span>
                                     ))}
                                 </div>
-                            </div>
+                            </Card>
                         ))}
                     </div>
                 </FadeIn>

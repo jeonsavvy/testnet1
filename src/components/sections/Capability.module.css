@@ -10,27 +10,7 @@
     margin-top: 3rem;
 }
 
-.categoryCard {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.categoryCard:hover {
-    background: rgba(255, 255, 255, 0.05);
-    transform: translateY(-5px);
-}
-
-.categoryTitle {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
+/* Unused styles removed */
 
 .tagContainer {
     display: flex;

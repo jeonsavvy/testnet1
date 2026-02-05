@@ -12,6 +12,18 @@ const profileData = [
 
 import FadeIn from '@/components/ui/FadeIn';
 
+const careerData = [
+    {
+        title: "쿠팡 주식회사",
+        subtitle: "2025.04 ~ 2025.07",
+        role: "Catalog Operation - Associate",
+        description: [
+            "데이터 정합성 확보: Raw Data를 분석하여, 일 평균 400건 이상의 상품 정보를 표준화된 기준으로 정제",
+            "이슈 리포팅: 업무 중 발견된 시스템 오류나 SOP 미비 사항을 식별 및 공유하여 운영 프로세스 효율 제고"
+        ]
+    }
+];
+
 export default function Profile() {
     return (
         <section id="profile" className={styles.section}>
@@ -31,10 +43,19 @@ export default function Profile() {
                         <div className={styles.cardGrid}>
                             {profileData.map((item, index) => (
                                 <Card
-                                    key={index}
+                                    key={`edu-${index}`}
                                     title={item.title}
                                     subtitle={item.subtitle}
                                     role={item.role}
+                                />
+                            ))}
+                            {careerData.map((item, index) => (
+                                <Card
+                                    key={`career-${index}`}
+                                    title={item.title}
+                                    subtitle={item.subtitle}
+                                    role={item.role}
+                                    description={item.description}
                                 />
                             ))}
                         </div>
