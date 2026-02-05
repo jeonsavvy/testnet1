@@ -4,7 +4,7 @@ import styles from './Career.module.css';
 
 const careerData = [
     {
-        company: "쿠팡 (Coupang)",
+        company: "쿠팡 주식회사",
         period: "2025.04 ~ 2025.07",
         role: "Catalog Operation - Associate",
         description: [

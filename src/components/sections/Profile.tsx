@@ -39,8 +39,7 @@ export default function Profile() {
                             ))}
                         </div>
                         <div className={styles.additionalInfo} style={{ marginTop: '20px', fontSize: '14px', color: 'var(--color-text-secondary)' }}>
-                            <p>Born in 1999</p>
-                            <p>Military Service: Army Sergeant (2020)</p>
+                            <p>병역: 군필 (2019.03 ~ 2020.10) 육군 병장</p>
                         </div>
                     </div>
                 </FadeIn>

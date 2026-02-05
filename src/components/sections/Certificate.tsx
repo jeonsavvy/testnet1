@@ -9,17 +9,12 @@ const activityData = [
     {
         title: "Hugging Face",
         subtitle: "Fundamentals of AI Agents & MCP 수료",
-        role: "Education",
+        role: "Activity",
     },
     {
         title: "두나무",
         subtitle: "AVAX AMA 참가, UDC 2025 참가, 업비트 투자 메이저리그 참가",
         role: "Activity",
-    },
-    {
-        title: "대한민국 육군",
-        subtitle: "육군 병장 만기 전역",
-        role: "Military",
     },
     {
         title: "자격증",
